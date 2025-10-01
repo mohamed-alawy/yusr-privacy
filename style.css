@@ -1,0 +1,537 @@
+/* يسر - تطبيق تحليل النماذج والعملات */
+
+/* إعادة تعيين أساسية */
+.yasir-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.yasir-page {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    line-height: 1.6;
+    direction: rtl;
+    min-height: 100vh;
+}
+
+/* Header */
+.yasir-header {
+    text-align: center;
+    padding: 100px 20px 50px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.yasir-title {
+    font-size: 4em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.yasir-tagline {
+    font-size: 1.4em;
+    opacity: 0.95;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Container */
+.yasir-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.yasir-hero {
+    text-align: center;
+    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    margin-bottom: 80px;
+    animation: fadeIn 1.5s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.yasir-hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.yasir-hero p {
+    font-size: 1.3em;
+    line-height: 1.9;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.yasir-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.yasir-btn {
+    padding: 18px 45px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.yasir-btn-primary {
+    background: #fff;
+    color: #667eea;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.yasir-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.yasir-btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.yasir-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    border-color: #fff;
+}
+
+/* Features Grid */
+.yasir-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-bottom: 80px;
+}
+
+.yasir-feature-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    padding: 45px 35px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.yasir-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fff, rgba(255,255,255,0.5));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.yasir-feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.yasir-feature-card:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.yasir-feature-icon {
+    font-size: 3.5em;
+    margin-bottom: 25px;
+    display: block;
+    font-weight: 300;
+}
+
+.yasir-feature-card h3 {
+    font-size: 2em;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.yasir-feature-card p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Section Title */
+.yasir-section-title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.yasir-section-subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Accessibility Section */
+.yasir-accessibility {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.yasir-accessibility-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    text-align: right;
+}
+
+.yasir-accessibility-item {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 30px 25px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.yasir-accessibility-item:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.yasir-accessibility-item strong {
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.yasir-accessibility-item p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Countries Section */
+.yasir-countries {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.yasir-countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.yasir-country-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.yasir-country-card:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.yasir-country-flag {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.yasir-country-card strong {
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.yasir-country-card p {
+    font-size: 1em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Footer */
+.yasir-footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.25);
+    margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.yasir-footer p {
+    margin: 12px 0;
+    opacity: 0.95;
+    font-size: 1.05em;
+}
+
+.yasir-footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.yasir-footer a:hover {
+    border-bottom-color: #fff;
+    opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .yasir-title {
+        font-size: 2.8em;
+    }
+    
+    .yasir-hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .yasir-hero p {
+        font-size: 1.1em;
+    }
+    
+    .yasir-feature-card {
+        padding: 35px 25px;
+    }
+    
+    .yasir-cta-buttons {
+        flex-direction: column;
+    }
+    
+    .yasir-btn {
+        width: 100%;
+    }
+    
+    .yasir-section-title {
+        font-size: 2.2em;
+    }
+}
+
+/* Privacy Page Styles */
+.yasir-privacy {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.yasir-privacy-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 60px 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    color: #333;
+    direction: rtl;
+    text-align: right;
+}
+
+.yasir-privacy-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #667eea;
+}
+
+.yasir-privacy h1 {
+    color: #667eea;
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.yasir-privacy-date {
+    color: #666;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.yasir-privacy h2 {
+    color: #764ba2;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-right: 5px solid #667eea;
+    padding-right: 20px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.yasir-privacy p {
+    margin-bottom: 18px;
+    text-align: right;
+    line-height: 1.9;
+    font-size: 1.05em;
+    color: #444;
+    direction: rtl;
+}
+
+.yasir-privacy ul {
+    margin: 20px 0;
+    padding-right: 35px;
+    text-align: right;
+    direction: rtl;
+    list-style-position: inside;
+}
+
+.yasir-privacy li {
+    margin: 15px 0;
+    line-height: 1.8;
+    font-size: 1.05em;
+    text-align: right;
+}
+
+.yasir-privacy strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.yasir-highlight-box {
+    background: linear-gradient(135deg, #f0f4ff, #e8ecff);
+    border-right: 5px solid #667eea;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+    text-align: right;
+    direction: rtl;
+}
+
+.yasir-highlight-box ul {
+    padding-right: 25px;
+}
+
+.yasir-contact-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.yasir-contact-box h2 {
+    color: #fff !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+    text-align: center !important;
+}
+
+.yasir-contact-box p {
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.yasir-contact-box a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.yasir-contact-box a:hover {
+    border-bottom-color: #fff;
+}
+
+.yasir-back-link {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 40px;
+    background: #667eea;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.yasir-back-link:hover {
+    background: #764ba2;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .yasir-privacy-container {
+        padding: 40px 25px;
+    }
+    
+    .yasir-privacy h1 {
+        font-size: 2.2em;
+    }
+    
+    .yasir-privacy h2 {
+        font-size: 1.6em;
+    }
+}
