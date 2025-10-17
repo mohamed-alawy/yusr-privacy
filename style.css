@@ -366,11 +366,29 @@
 
 /* Footer */
 .yasir-footer {
-    text-align: center;
-    padding: 50px 20px;
+    padding: 50px 40px;
     background: #1C1C1E; /* iOS Dark Surface */
     margin-top: 80px;
     border-top: 0.5px solid rgba(142, 142, 147, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-left {
+    text-align: right;
+    flex: 1;
+}
+
+.footer-right {
+    text-align: left;
+    flex: 1;
 }
 
 .yasir-footer p {
@@ -378,6 +396,10 @@
     opacity: 0.95;
     font-size: 1.05em;
     color: #FFFFFF;
+}
+
+.footer-links {
+    margin-top: 20px;
 }
 
 .yasir-footer a {
@@ -391,6 +413,15 @@
 .yasir-footer a:hover {
     border-bottom-color: #0A84FF;
     opacity: 1;
+}
+
+.footer-organization {
+    font-size: 0.95em;
+    line-height: 1.8;
+}
+
+.footer-organization span {
+    opacity: 0.8;
 }
 
 /* Animations */
@@ -489,6 +520,20 @@
     
     .yasir-section-title {
         font-size: 2.2em;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-left,
+    .footer-right {
+        text-align: center;
+    }
+    
+    .yasir-footer {
+        padding: 40px 20px;
     }
 }
 
