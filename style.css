@@ -17,10 +17,73 @@
     min-height: 100vh;
 }
 
+/* Top Navigation Header */
+.top-nav-header {
+    background: rgba(28, 28, 30, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 0.5px solid rgba(142, 142, 147, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba(0, 122, 255, 0.3));
+}
+
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #8E8E93;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    background: rgba(0, 122, 255, 0.1);
+}
+
+.nav-link.active {
+    color: #007AFF;
+    background: rgba(0, 122, 255, 0.15);
+}
+
 /* Header */
 .yasir-header {
     text-align: center;
-    padding: 80px 20px 50px;
+    padding: 100px 20px 50px;
     animation: fadeInDown 1s ease-in-out;
     background: linear-gradient(180deg, rgba(0, 122, 255, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
@@ -31,32 +94,24 @@
 }
 
 .main-logo {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
-    filter: drop-shadow(0 0 20px rgba(0, 122, 255, 0.4));
+    filter: drop-shadow(0 0 30px rgba(0, 122, 255, 0.5));
     transition: transform 0.3s ease;
+    animation: pulse 3s ease-in-out infinite;
 }
 
 .main-logo:hover {
     transform: scale(1.05);
 }
 
-.yasir-title {
-    font-size: 4em;
-    margin-bottom: 15px;
-    text-shadow: 0 0 30px rgba(0, 122, 255, 0.5);
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #007AFF; /* iOS Blue */
-}
-
 .yasir-tagline {
-    font-size: 1.4em;
+    font-size: 1.5em;
     opacity: 0.9;
     margin-bottom: 30px;
     font-weight: 400;
-    color: #8E8E93; /* iOS Secondary Text */
+    color: #FFFFFF;
 }
 
 /* Container */
@@ -381,8 +436,35 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .yasir-title {
-        font-size: 2.8em;
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .nav-logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .main-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .yasir-header {
+        padding: 80px 20px 40px;
+    }
+    
+    .yasir-tagline {
+        font-size: 1.2em;
     }
     
     .yasir-hero h2 {
@@ -416,78 +498,7 @@
     min-height: 100vh;
 }
 
-/* Privacy Page Header */
-.privacy-top-header {
-    background: #1C1C1E;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 0.5px solid rgba(142, 142, 147, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 10px rgba(0, 122, 255, 0.3));
-}
-
-.header-text {
-    text-align: right;
-}
-
-.header-title {
-    font-size: 1.5em;
-    color: #007AFF;
-    margin: 0;
-    font-weight: 700;
-}
-
-.header-subtitle {
-    font-size: 0.9em;
-    color: #8E8E93;
-    margin: 0;
-}
-
-.header-back-btn {
-    background: #007AFF;
-    color: #FFFFFF;
-    padding: 10px 24px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.3s ease;
-}
-
-.header-back-btn:hover {
-    background: #0A84FF;
-    transform: translateY(-2px);
-}
-
-/* Privacy Icon */
-.privacy-icon-container {
-    text-align: center;
-    margin: 40px 0 30px;
-}
-
-.privacy-icon {
-    font-size: 80px;
-    display: inline-block;
-    animation: fadeIn 1s ease-in-out, glow 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 15px rgba(0, 122, 255, 0.4));
-}
+/* Privacy Page Specific */
 
 .yasir-privacy-container {
     max-width: 950px;
@@ -661,43 +672,14 @@
 @media (max-width: 768px) {
     .yasir-privacy-container {
         padding: 40px 25px;
-        margin: 20px;
+        margin: 20px 15px;
     }
     
     .yasir-privacy h1 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
     
     .yasir-privacy h2 {
         font-size: 1.5em;
-    }
-    
-    .privacy-top-header {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .header-content {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .header-back-btn {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .main-logo {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .yasir-title {
-        font-size: 2.5em;
-    }
-    
-    .privacy-icon {
-        font-size: 60px;
     }
 }
