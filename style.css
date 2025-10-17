@@ -1,6 +1,25 @@
 /* يسر - تطبيق تحليل النماذج والعملات */
 /* iOS Theme - Matching App Design */
 
+/* إعادة تعيين شاملة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000; /* Pure Black */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', 'Cairo', 'Tajawal', 'Arial', sans-serif;
+    color: #FFFFFF;
+    line-height: 1.6;
+    direction: rtl;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
 /* إعادة تعيين أساسية */
 .yasir-page * {
     margin: 0;
@@ -15,6 +34,13 @@
     line-height: 1.6;
     direction: rtl;
     min-height: 100vh;
+}
+
+.yasir-privacy {
+    background: #000000;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* Top Navigation Header */
@@ -379,6 +405,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    direction: rtl;
 }
 
 .footer-left {
@@ -389,6 +416,7 @@
 .footer-right {
     text-align: left;
     flex: 1;
+    direction: ltr;
 }
 
 .yasir-footer p {
@@ -412,7 +440,7 @@
 
 .yasir-footer a:hover {
     border-bottom-color: #0A84FF;
-    opacity: 1;
+    color: #0A84FF;
 }
 
 .footer-organization {
@@ -420,8 +448,13 @@
     line-height: 1.8;
 }
 
+.footer-organization strong {
+    color: #007AFF;
+}
+
 .footer-organization span {
-    opacity: 0.8;
+    opacity: 0.85;
+    font-size: 0.95em;
 }
 
 /* Animations */
@@ -541,13 +574,14 @@
 .yasir-privacy {
     background: #000000; /* Pure Black - iOS style */
     min-height: 100vh;
+    padding: 0 20px 40px 20px;
 }
 
 /* Privacy Page Specific */
 
 .yasir-privacy-container {
     max-width: 950px;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
     background: #1C1C1E; /* iOS Dark Surface */
     padding: 60px 50px;
     border-radius: 20px; /* iOS rounded corners */
@@ -715,9 +749,13 @@
 }
 
 @media (max-width: 768px) {
+    .yasir-privacy {
+        padding: 0 15px 40px 15px;
+    }
+    
     .yasir-privacy-container {
         padding: 40px 25px;
-        margin: 20px 15px;
+        margin: 20px 0;
     }
     
     .yasir-privacy h1 {
@@ -726,5 +764,9 @@
     
     .yasir-privacy h2 {
         font-size: 1.5em;
+    }
+    
+    .footer-right {
+        direction: rtl;
     }
 }
