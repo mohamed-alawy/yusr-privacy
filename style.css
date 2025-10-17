@@ -18,6 +18,9 @@ body {
     direction: rtl;
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* إعادة تعيين أساسية */
@@ -498,65 +501,150 @@ body {
     }
 }
 
-/* Responsive */
+/* Responsive - Mobile First */
 @media (max-width: 768px) {
+    /* Navigation */
     .nav-container {
-        padding: 0 20px;
+        padding: 0 15px;
     }
     
     .nav-logo {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
     }
     
     .nav-links {
-        gap: 10px;
+        gap: 8px;
     }
     
     .nav-link {
-        font-size: 14px;
-        padding: 6px 12px;
+        font-size: 13px;
+        padding: 6px 10px;
     }
     
+    /* Header */
     .main-logo {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
     
     .yasir-header {
-        padding: 80px 20px 40px;
+        padding: 70px 15px 35px;
     }
     
     .yasir-tagline {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        padding: 0 10px;
+    }
+    
+    /* Hero Section */
+    .yasir-hero {
+        padding: 40px 20px;
+        margin-bottom: 50px;
     }
     
     .yasir-hero h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     
     .yasir-hero p {
-        font-size: 1.1em;
+        font-size: 1em;
+        line-height: 1.7;
     }
     
-    .yasir-feature-card {
-        padding: 35px 25px;
-    }
-    
+    /* Buttons */
     .yasir-cta-buttons {
         flex-direction: column;
+        gap: 15px;
     }
     
     .yasir-btn {
         width: 100%;
+        padding: 14px 30px;
+        font-size: 16px;
     }
     
+    /* Features */
+    .yasir-features {
+        gap: 25px;
+    }
+    
+    .yasir-feature-card {
+        padding: 30px 20px;
+    }
+    
+    .yasir-feature-card h3 {
+        font-size: 1.6em;
+    }
+    
+    .yasir-feature-card p {
+        font-size: 1em;
+    }
+    
+    /* Sections */
     .yasir-section-title {
-        font-size: 2.2em;
+        font-size: 2em;
+        padding: 0 15px;
+    }
+    
+    .yasir-section-subtitle {
+        font-size: 1.1em;
+        padding: 0 15px;
+    }
+    
+    .yasir-container {
+        padding: 0 15px;
+    }
+    
+    /* Accessibility Section */
+    .yasir-accessibility {
+        padding: 40px 25px;
+        margin-bottom: 50px;
+    }
+    
+    .yasir-accessibility-features {
+        gap: 20px;
+    }
+    
+    .yasir-accessibility-item {
+        padding: 25px 20px;
+    }
+    
+    .yasir-accessibility-item strong {
+        font-size: 1.2em;
+    }
+    
+    .yasir-accessibility-item p {
+        font-size: 1em;
+    }
+    
+    /* Countries Section */
+    .yasir-countries {
+        padding: 40px 25px;
+        margin-bottom: 50px;
+    }
+    
+    .yasir-countries-grid {
+        gap: 20px;
+    }
+    
+    .yasir-country-card {
+        padding: 25px 15px;
+    }
+    
+    .yasir-country-flag {
+        font-size: 3em;
+    }
+    
+    /* Footer */
+    .yasir-footer {
+        padding: 40px 20px;
+        margin-top: 50px;
     }
     
     .footer-content {
         flex-direction: column;
+        gap: 30px;
         text-align: center;
     }
     
@@ -565,8 +653,16 @@ body {
         text-align: center;
     }
     
-    .yasir-footer {
-        padding: 40px 20px;
+    .footer-right {
+        direction: rtl;
+    }
+    
+    .yasir-footer p {
+        font-size: 1em;
+    }
+    
+    .footer-organization {
+        font-size: 0.9em;
     }
 }
 
@@ -748,21 +844,160 @@ body {
     transform: translateY(-2px);
 }
 
+/* Privacy Page Mobile */
 @media (max-width: 768px) {
     .yasir-privacy-container {
-        padding: 40px 25px;
-        margin: 20px;
+        padding: 40px 20px;
+        margin: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .yasir-privacy-header {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
     }
     
     .yasir-privacy h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
     .yasir-privacy h2 {
+        font-size: 1.4em;
+        padding-right: 15px;
+    }
+    
+    .yasir-privacy p {
+        font-size: 1em;
+        line-height: 1.8;
+    }
+    
+    .yasir-privacy li {
+        font-size: 1em;
+        padding-right: 20px;
+    }
+    
+    .yasir-privacy li::before {
+        font-size: 1.3em;
+    }
+    
+    .yasir-highlight-box {
+        padding: 20px 25px;
+        margin: 20px 0;
+    }
+    
+    .yasir-contact-box {
+        padding: 30px 25px;
+        margin-top: 25px;
+    }
+    
+    .yasir-contact-box h2 {
         font-size: 1.5em;
     }
     
-    .footer-right {
-        direction: rtl;
+    .yasir-contact-box p {
+        font-size: 0.95em;
+    }
+    
+    .privacy-section {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+/* Extra Small Devices (phones in portrait, less than 480px) */
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .nav-logo {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .nav-links {
+        gap: 5px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    
+    .main-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .yasir-tagline {
+        font-size: 1em;
+    }
+    
+    .yasir-hero {
+        padding: 30px 15px;
+    }
+    
+    .yasir-hero h2 {
+        font-size: 1.4em;
+    }
+    
+    .yasir-hero p {
+        font-size: 0.95em;
+    }
+    
+    .yasir-btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+    
+    .yasir-feature-card {
+        padding: 25px 15px;
+    }
+    
+    .yasir-feature-icon {
+        font-size: 3em;
+    }
+    
+    .yasir-feature-card h3 {
+        font-size: 1.4em;
+    }
+    
+    .yasir-section-title {
+        font-size: 1.8em;
+    }
+    
+    .yasir-accessibility {
+        padding: 30px 20px;
+    }
+    
+    .yasir-countries {
+        padding: 30px 20px;
+    }
+    
+    .yasir-footer {
+        padding: 30px 15px;
+    }
+    
+    .yasir-footer p {
+        font-size: 0.95em;
+    }
+    
+    /* Privacy Page */
+    .yasir-privacy-container {
+        padding: 30px 15px;
+        margin: 15px 10px;
+    }
+    
+    .yasir-privacy h1 {
+        font-size: 1.6em;
+    }
+    
+    .yasir-privacy h2 {
+        font-size: 1.3em;
+    }
+    
+    .yasir-privacy p,
+    .yasir-privacy li {
+        font-size: 0.95em;
     }
 }
