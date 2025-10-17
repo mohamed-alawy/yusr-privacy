@@ -148,6 +148,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Hero Section */
@@ -225,6 +226,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 35px;
     margin-bottom: 80px;
+    width: 100%;
 }
 
 .yasir-feature-card {
@@ -504,13 +506,18 @@ body {
 /* Responsive - Mobile First */
 @media (max-width: 768px) {
     /* Navigation */
+    .top-nav-header {
+        padding: 12px 0;
+    }
+    
     .nav-container {
         padding: 0 15px;
+        max-width: 100%;
     }
     
     .nav-logo {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
     }
     
     .nav-links {
@@ -524,128 +531,160 @@ body {
     
     /* Header */
     .main-logo {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
     
     .yasir-header {
-        padding: 70px 15px 35px;
+        padding: 60px 15px 30px;
+        text-align: center;
     }
     
     .yasir-tagline {
-        font-size: 1.1em;
-        padding: 0 10px;
+        font-size: 1em;
+        padding: 0 20px;
     }
     
     /* Hero Section */
     .yasir-hero {
-        padding: 40px 20px;
-        margin-bottom: 50px;
+        padding: 30px 20px;
+        margin-bottom: 40px;
+        text-align: center;
     }
     
     .yasir-hero h2 {
-        font-size: 1.6em;
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
     
     .yasir-hero p {
-        font-size: 1em;
+        font-size: 0.95em;
         line-height: 1.7;
+        text-align: center;
     }
     
     /* Buttons */
     .yasir-cta-buttons {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
     }
     
     .yasir-btn {
         width: 100%;
-        padding: 14px 30px;
-        font-size: 16px;
+        padding: 13px 25px;
+        font-size: 15px;
     }
     
     /* Features */
     .yasir-features {
-        gap: 25px;
+        gap: 20px;
+        grid-template-columns: 1fr;
     }
     
     .yasir-feature-card {
-        padding: 30px 20px;
+        padding: 25px 20px;
+        text-align: center;
+    }
+    
+    .yasir-feature-icon {
+        font-size: 2.8em;
+        margin-bottom: 15px;
     }
     
     .yasir-feature-card h3 {
-        font-size: 1.6em;
+        font-size: 1.4em;
+        margin-bottom: 12px;
     }
     
     .yasir-feature-card p {
-        font-size: 1em;
+        font-size: 0.95em;
+        line-height: 1.6;
     }
     
     /* Sections */
     .yasir-section-title {
-        font-size: 2em;
+        font-size: 1.8em;
         padding: 0 15px;
+        text-align: center;
     }
     
     .yasir-section-subtitle {
-        font-size: 1.1em;
-        padding: 0 15px;
+        font-size: 1em;
+        padding: 0 20px;
+        text-align: center;
     }
     
     .yasir-container {
         padding: 0 15px;
+        max-width: 100%;
     }
     
     /* Accessibility Section */
     .yasir-accessibility {
-        padding: 40px 25px;
-        margin-bottom: 50px;
+        padding: 35px 20px;
+        margin-bottom: 40px;
+        text-align: center;
     }
     
     .yasir-accessibility-features {
-        gap: 20px;
+        gap: 15px;
+        grid-template-columns: 1fr;
     }
     
     .yasir-accessibility-item {
-        padding: 25px 20px;
+        padding: 20px 18px;
+        text-align: center;
     }
     
     .yasir-accessibility-item strong {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     
     .yasir-accessibility-item p {
-        font-size: 1em;
+        font-size: 0.95em;
+        line-height: 1.6;
     }
     
     /* Countries Section */
     .yasir-countries {
-        padding: 40px 25px;
-        margin-bottom: 50px;
+        padding: 35px 20px;
+        margin-bottom: 40px;
+        text-align: center;
     }
     
     .yasir-countries-grid {
-        gap: 20px;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .yasir-country-card {
-        padding: 25px 15px;
+        padding: 20px 12px;
     }
     
     .yasir-country-flag {
-        font-size: 3em;
+        font-size: 2.8em;
+        margin-bottom: 10px;
+    }
+    
+    .yasir-country-card strong {
+        font-size: 1.1em;
+    }
+    
+    .yasir-country-card p {
+        font-size: 0.9em;
     }
     
     /* Footer */
     .yasir-footer {
-        padding: 40px 20px;
-        margin-top: 50px;
+        padding: 35px 20px;
+        margin-top: 40px;
     }
     
     .footer-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
         text-align: center;
+        max-width: 100%;
     }
     
     .footer-left,
@@ -658,11 +697,11 @@ body {
     }
     
     .yasir-footer p {
-        font-size: 1em;
+        font-size: 0.95em;
     }
     
     .footer-organization {
-        font-size: 0.9em;
+        font-size: 0.85em;
     }
 }
 
@@ -911,8 +950,8 @@ body {
     }
     
     .nav-logo {
-        width: 35px;
-        height: 35px;
+        width: 32px;
+        height: 32px;
     }
     
     .nav-links {
@@ -925,79 +964,125 @@ body {
     }
     
     .main-logo {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
     
     .yasir-tagline {
-        font-size: 1em;
+        font-size: 0.9em;
+        padding: 0 15px;
     }
     
     .yasir-hero {
-        padding: 30px 15px;
-    }
-    
-    .yasir-hero h2 {
-        font-size: 1.4em;
-    }
-    
-    .yasir-hero p {
-        font-size: 0.95em;
-    }
-    
-    .yasir-btn {
-        padding: 12px 25px;
-        font-size: 15px;
-    }
-    
-    .yasir-feature-card {
         padding: 25px 15px;
     }
     
+    .yasir-hero h2 {
+        font-size: 1.3em;
+    }
+    
+    .yasir-hero p {
+        font-size: 0.9em;
+    }
+    
+    .yasir-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .yasir-feature-card {
+        padding: 20px 15px;
+    }
+    
     .yasir-feature-icon {
-        font-size: 3em;
+        font-size: 2.5em;
     }
     
     .yasir-feature-card h3 {
-        font-size: 1.4em;
+        font-size: 1.3em;
+    }
+    
+    .yasir-feature-card p {
+        font-size: 0.9em;
     }
     
     .yasir-section-title {
-        font-size: 1.8em;
+        font-size: 1.6em;
+    }
+    
+    .yasir-section-subtitle {
+        font-size: 0.95em;
     }
     
     .yasir-accessibility {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+    
+    .yasir-accessibility-item {
+        padding: 18px 15px;
+    }
+    
+    .yasir-accessibility-item strong {
+        font-size: 1em;
+    }
+    
+    .yasir-accessibility-item p {
+        font-size: 0.9em;
     }
     
     .yasir-countries {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+    
+    .yasir-countries-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .yasir-country-card {
+        padding: 18px 10px;
+    }
+    
+    .yasir-country-flag {
+        font-size: 2.5em;
+    }
+    
+    .yasir-country-card strong {
+        font-size: 1em;
+    }
+    
+    .yasir-country-card p {
+        font-size: 0.85em;
     }
     
     .yasir-footer {
-        padding: 30px 15px;
+        padding: 25px 15px;
     }
     
     .yasir-footer p {
-        font-size: 0.95em;
+        font-size: 0.9em;
+    }
+    
+    .footer-organization {
+        font-size: 0.8em;
     }
     
     /* Privacy Page */
     .yasir-privacy-container {
-        padding: 30px 15px;
+        padding: 25px 15px;
         margin: 15px 10px;
     }
     
     .yasir-privacy h1 {
-        font-size: 1.6em;
+        font-size: 1.5em;
     }
     
     .yasir-privacy h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
     
     .yasir-privacy p,
     .yasir-privacy li {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
 }
